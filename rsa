@@ -1,0 +1,37 @@
+#include "factor.h"
+#is a challenge
+/**
+ * main - main function
+ *
+ * Author: Korie Titilayo <titikorie@gmail.com>
+ """
+Factorize numbers in a file into a product of two prime numbers
+"""
+import sys
+
+
+def factorize():
+    """
+    A function to search file and factorize the given set of numbers into two prime numbers (format n = p*q)
+    """
+    try:
+        file = sys.argv[1]
+        with open(filename) as j:
+            for count in j:
+                count = int(count)
+                if count % 2 == 0:
+                        print("{}={}*{}".format(count, count // 2, 2))
+                        continue
+                i = 3
+                while i < count // 2:
+                    if count % i == 0:
+                        print("{}={}*{}".format(count, count // i, i))
+                        break
+                    i = i + 2
+                if i == (count // 2) + 1:
+                    print("{}={}*{}".format(count, count, 1))
+    except (IndexError):
+        pass
+
+
+factorize()
